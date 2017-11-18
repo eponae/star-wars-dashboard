@@ -1,0 +1,10 @@
+{
+  "extends": "airbnb-base/legacy",
+  "parser": "babel-eslint",
+  "rules": {
+    "no-unused-vars": "warn"
+  },
+  "globals": {
+    "angular": true
+  }
+}
