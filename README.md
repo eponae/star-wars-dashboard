@@ -8,21 +8,22 @@
 Last versions of Chrome, Firefox or Safari
 
 ### Installation
-1. Clone the repository: `git clone ...`
+1. Clone the repository: `git clone https://github.com/eponae/star-wars-dashboard.git`
+2. Install Node dependencies: `npm install`
 3. Start project with source maps for development purpose only: `npm start`
 4. Open a browser (Chrome, Firefox or Safari) and go to the url `localhost:4242`
 
 You can build the project without JS source maps and 
 with minification : `npm build` and deploy it on your own server.
 
-NB : NodeJS depencies are automatically installed on `npm start` or `npm build`. 
-Those npm tasks launch `npm install` with prestart or prebuild.  
-### Development
+NB : NodeJS dependencies are automatically installed on `npm build`. 
+This npm task launches `npm install` with prebuild task.  
 
+### Development
 AngularJS version : 1.6.6 (components base architecture)
 EcmaScript version : ES6
 
-#### Build compatibility
+#### OS compatibility
 Linux distribution or MAC OS.
 
 #### Developer tools
@@ -34,7 +35,6 @@ JS, HTML, and SCSS files imported in the application are automatically reloaded
 after saving on development mode.
 
 #### External Modules
-
 [`angular-material`](https://material.angularjs.org/latest/)
 [`ui-router`](https://github.com/angular-ui/ui-router)
 
