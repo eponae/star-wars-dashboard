@@ -1,0 +1,16 @@
+<md-content layout="column">
+    <div ng-bind="($ctrl.characters.count || 0) + ' characters'"></div>
+    <md-content>
+        <md-list>
+            <md-list-item class="md-3-line" ng-repeat="character in $ctrl.characters.data">
+                <div class="md-list-item-text">
+                    <h5 class="conservatory-name">{{character.name}}</h5>
+                </div>
+                <md-button class="md-secondary md-icon-button">
+                </md-button>
+
+                <md-divider ng-if="!$last"></md-divider>
+            </md-list-item>
+        </md-list>
+    </md-content>
+</md-content>

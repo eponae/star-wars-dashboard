@@ -40,7 +40,9 @@
     "format": "prettier-eslint --write \"app/scripts/**/*.js\"",
     "clean": "rm -fr ./dist && mkdir ./dist",
     "copy-fonts": "mkdir -p ./dist/fonts && cp ./node_modules/material-design-icons/iconfont/MaterialIcons-Regular.* ./dist/fonts/",
-    "prestart": "npm run clean && npm run copy-fonts && npm run format",
+    "copy-svg": "mkdir -p ./dist/svg && cp ./app/assets/svg/*.svg ./dist/svg/",
+    "copy-assets": "npm run copy-fonts && npm run copy-svg",
+    "prestart": "npm run clean && npm run copy-assets && npm run format",
     "start": "npm run prestart && webpack-dev-server --port 4242 --hot --content-base dist/",
     "prebuild": "npm install",
     "build": "PROD=true webpack -p"

@@ -20,8 +20,8 @@ NB : NodeJS dependencies are automatically installed on `npm build`.
 This npm task launches `npm install` with prebuild task.  
 
 ### Development
-AngularJS version : 1.6.6 (components base architecture)
-EcmaScript version : ES6
+- AngularJS version : 1.6.6 (components base architecture)
+- EcmaScript version : ES6
 
 #### OS compatibility
 Linux distribution or MAC OS.
@@ -45,4 +45,4 @@ Others configuration aspects can be found in `src/scripts/app-config.js`
 
 ### Ressources
 Go to `src/assets` :
-    - `sass` contains SASS main stylesheets
+    `sass` contains SASS main stylesheets

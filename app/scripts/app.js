@@ -1,4 +1,3 @@
-import 'lodash';
 import 'angular';
 import 'angular-ui-router';
 import 'angular-animate';
@@ -8,13 +7,13 @@ import 'angular-material';
 
 import '../assets/sass/app.scss';
 
-import config from './app-config.js';
 import ErrorService from './error-service.js';
-import dashboard from './dashboard/dashboard.module.js';
 import people from './people/people.module.js';
+import dashboard from './dashboard/dashboard.module.js';
+import config from './app-config.js';
 
 export default angular
-  .module('starWarsDashboard', ['ui.router', 'ngMaterial', dashboard.name, people.name])
+  .module('starWarsDashboard', ['ui.router', 'ngMaterial', people.name, dashboard.name])
+  .service('errorService', ErrorService)
   .constant('API_URL', 'https://swapi.co/api/people/')
-  .config(config)
-  .service('errorService', ErrorService);
+  .config(config);
