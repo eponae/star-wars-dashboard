@@ -4,10 +4,10 @@
 ### Requirements
 * [NodeJS](http://nodejs.org/) (with [NPM](https://www.npmjs.org/))
 
-### Compatibility
+## Compatibility
 Last versions of Chrome, Firefox or Safari
 
-### Installation
+## Installation
 1. Clone the repository: `git clone https://github.com/eponae/star-wars-dashboard.git`
 2. Install Node dependencies: `npm install`
 3. Start project with source maps for development purpose only: `npm start`
@@ -19,9 +19,18 @@ with minification : `npm build` and deploy it on your own server.
 NB : NodeJS dependencies are automatically installed on `npm build`. 
 This npm task launches `npm install` with prebuild task.  
 
-### Development
+## Development
 - AngularJS version : 1.6.6 (components base architecture)
 - EcmaScript version : ES6
+
+#### Launch unit tests
+Install Node dependencies: `npm install`
+
+To restart tests on code modifications
+- `npm test`
+
+To launch tests only once
+- `npm run test-single-run`
 
 #### OS compatibility
 Linux distribution or MAC OS.
@@ -34,15 +43,15 @@ Sasslint for SCSS style quality.
 JS, HTML, and SCSS files imported in the application are automatically reloaded 
 after saving on development mode.
 
-#### External Modules
+### Project
+#### External modules
 [`angular-material`](https://material.angularjs.org/latest/)
 [`ui-router`](https://github.com/angular-ui/ui-router)
 
-## Project
-### Modules, Routes
+#### Modules, Routes
 Modules are imported in `src/scripts/app.js`
 Others configuration aspects can be found in `src/scripts/app-config.js`
 
-### Ressources
+#### Ressources
 Go to `src/assets` :
     `sass` contains SASS main stylesheets

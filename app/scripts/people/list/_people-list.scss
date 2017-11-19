@@ -2,13 +2,7 @@
   @include flex-style(row, nowrap);
   align-items: center;
   justify-content: space-between;
-
-  @media screen and (max-width: $responsive-width) {
-    width: 100%;
-  }
-  @media screen and (min-width: $responsive-width) {
-    width: 80%;
-  }
+  width: 100%;
 }
 
 .people-list {

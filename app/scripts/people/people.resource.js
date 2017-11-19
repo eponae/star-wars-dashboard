@@ -8,6 +8,5 @@ export default class PeopleResource {
     this.eye_color = character.eye_color;
     this.birth_year = character.birth_year;
     this.gender = character.gender;
-    this.homeworld = character.homeworld;
   }
 }
