@@ -2,7 +2,7 @@
 
 ## Usage
 ### Requirements
-* [NodeJS](http://nodejs.org/) (with [NPM](https://www.npmjs.org/))
+* [NodeJS](http://nodejs.org/) v8.9.1 LTS ou v6.12.0 (with [NPM](https://www.npmjs.org/))
 
 ## Compatibility
 Last versions of Chrome, Firefox or Safari
