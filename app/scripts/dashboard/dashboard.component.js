@@ -5,14 +5,16 @@ class DashboardController {
     this.dashboardService = dashboardService;
   }
 
-  initCharacters() {
-    this.dashboardService.getCharacters().then(characters => {
+  searchCharacter() {
+    this.dashboardService.getCharacters(this.page, this.searchedText).then(characters => {
       this.characters = characters;
     });
   }
 
   $onInit() {
-    this.initCharacters();
+    this.page = 1;
+    this.searchedText = '';
+    this.searchCharacter();
   }
 }
 DashboardController.$inject = ['dashboardService'];

@@ -39,7 +39,7 @@ module.exports = {
         })
       },
       {
-        test: /MaterialIcons-Regular(\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?))/,
+        test: /Material-Design-Iconic-Font(\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?))/,
         loader: 'file-loader?name=[name].[ext]&outputPath=/fonts/'
       },
       {

@@ -3,12 +3,8 @@ export default class DashboardService {
     this.peopleService = peopleService;
   }
 
-  findCharacter(searchedText) {
-    return this.peopleService.findACharacter(searchedText).then(character => character);
-  }
-
-  getCharacters() {
-    return this.peopleService.getCharactersList().then(characters => characters);
+  getCharacters(page, searchedText) {
+    return this.peopleService.getCharacters(page, searchedText).then(characters => characters);
   }
 }
 DashboardService.$inject = ['peopleService'];

@@ -1,0 +1,65 @@
+.navigate {
+  @include flex-style(row, nowrap);
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (max-width: $responsive-width) {
+    width: 100%;
+  }
+  @media screen and (min-width: $responsive-width) {
+    width: 80%;
+  }
+}
+
+.people-list {
+  @include flex-style(row, wrap);
+  height: auto;
+  overflow: hidden;
+  width: 100%;
+
+  .list-card {
+
+    @include flex-style(column, nowrap);
+
+    background: $light-gray;
+    border: 1px solid $gray;
+
+    @media screen and (max-width: $responsive-width) {
+      flex: 1 1 100%;
+    }
+    @media screen and (min-width: $responsive-width) {
+      flex: 0 0 300px;
+    }
+
+    height: 150px;
+
+    margin: 10px;
+    padding: 5px;
+
+    .card-content {
+      height: 100%;
+      width: 100%;
+
+      .character-name {
+        color: $blue;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0 0 15px;
+      }
+
+      .character-info {
+        @include flex-style(row, wrap);
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .md-secondary-container {
+        display: none;
+      }
+    }
+
+    &::before {
+      display: none;
+    }
+  }
+}

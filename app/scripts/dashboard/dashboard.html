@@ -1,4 +1,7 @@
 <md-input-container>
-    <input ng-model="$ctrl.searchedText" placeholder="Find a character">
+    <input ng-model="$ctrl.searchedText"
+           ng-model-options="{ debounce: 200 }"
+           placeholder="Find a character"
+           ng-change="$ctrl.searchCharacter()">
 </md-input-container>
-<people-list characters="$ctrl.characters"></people-list>
+<people-list characters="$ctrl.characters" searched-text="{{$ctrl.searchedText}}"></people-list>

@@ -7,21 +7,28 @@ export default class PeopleService {
     this.errorService = errorService;
   }
 
-  findACharacter(searchedText) {
+  getCharacters(page = 1, searchedText = '') {
     return this.$http
-      .get(this.API_URL + '?search=' + searchedText)
-      .then(response => response.data.results.map(character => new PeopleResource(character)))
+      .get(this.API_URL + '?page=' + page + '&search=' + searchedText)
+      .then(response => ({
+        data: response.data.results.map(character => new PeopleResource(character)),
+        previous: response.data.previous,
+        next: response.data.next,
+        count: response.data.count
+      }))
       .catch(() => this.errorService.showSimpleToast('Error while searching for a character.'));
   }
 
-  getCharactersList(page = 1) {
+  getPage(url) {
     return this.$http
-      .get(this.API_URL + '?page=' + page)
+      .get(url)
       .then(response => ({
         data: response.data.results.map(character => new PeopleResource(character)),
+        previous: response.data.previous,
+        next: response.data.next,
         count: response.data.count
       }))
-      .catch(() => this.errorService.showSimpleToast('Impossible to get the list of characters.'));
+      .catch(() => this.errorService.showSimpleToast('Error while getting the new page.'));
   }
 }
 PeopleService.$inject = ['$http', 'API_URL', 'errorService'];

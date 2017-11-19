@@ -1,1 +1,4 @@
-
+@mixin flex-style($direction, $wrap) {
+  display: inline-flex;
+  flex-flow: $direction $wrap;
+}

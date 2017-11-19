@@ -7,3 +7,6 @@ files:
     - "node_modules/**/*.s+(a|c)ss"
 rules:
   no-duplicate-properties: 0
+  nesting-depth:
+      - 1
+      - max-depth: 4
