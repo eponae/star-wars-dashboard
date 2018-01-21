@@ -19,7 +19,9 @@ class DashboardController {
 }
 DashboardController.$inject = ['dashboardService'];
 
-export default {
+const dashboard = {
   template: dashboardTemplate,
   controller: DashboardController
 };
+
+export { dashboard };

@@ -1,4 +1,4 @@
-export default function configuration($stateProvider, $urlRouterProvider, $mdAriaProvider) {
+function configuration($stateProvider, $urlRouterProvider, $mdAriaProvider) {
   $mdAriaProvider.disableWarnings();
 
   $urlRouterProvider.otherwise('/dashboard');
@@ -8,5 +8,6 @@ export default function configuration($stateProvider, $urlRouterProvider, $mdAri
     template: '<dashboard></dashboard>'
   });
 }
-
 configuration.$inject = ['$stateProvider', '$urlRouterProvider', '$mdAriaProvider'];
+
+export { configuration };

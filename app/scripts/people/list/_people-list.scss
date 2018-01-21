@@ -1,7 +1,15 @@
 .navigate {
-  @include flex-style(row, nowrap);
+
+  @media screen and (max-width: $responsive-width) {
+    @include flex-style(column, nowrap);
+  }
+  @media screen and (min-width: $responsive-width) {
+    @include flex-style(row, nowrap);
+  }
+
   align-items: center;
   justify-content: space-between;
+  padding-top: 10px;
   width: 100%;
 }
 

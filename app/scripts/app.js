@@ -7,13 +7,13 @@ import 'angular-material';
 
 import '../assets/sass/app.scss';
 
-import ErrorService from './error-service.js';
-import people from './people/people.module.js';
-import dashboard from './dashboard/dashboard.module.js';
-import config from './app-config.js';
+import { ErrorService } from './error-service.js';
+import { peopleModule } from './people/people.module.js';
+import { dashboardModule } from './dashboard/dashboard.module.js';
+import { configuration } from './app-config.js';
 
-export default angular
-  .module('starWarsDashboard', ['ui.router', 'ngMaterial', people.name, dashboard.name])
+angular
+  .module('starWarsDashboard', ['ui.router', 'ngMaterial', peopleModule.name, dashboardModule.name])
   .service('errorService', ErrorService)
   .constant('API_URL', 'https://swapi.co/api/people/')
-  .config(config);
+  .config(configuration);

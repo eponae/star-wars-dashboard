@@ -1,6 +1,6 @@
-import PeopleResource from './people.resource.js';
+import { PeopleResource } from './people.resource.js';
 
-export default class PeopleService {
+class PeopleService {
   constructor($http, API_URL, errorService) {
     this.$http = $http;
     this.API_URL = API_URL;
@@ -32,3 +32,5 @@ export default class PeopleService {
   }
 }
 PeopleService.$inject = ['$http', 'API_URL', 'errorService'];
+
+export { PeopleService };

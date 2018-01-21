@@ -1,5 +1,3 @@
-var webpackConfig = require('./webpack.config.test.js');
-
 module.exports = function (config) {
   config.set({
 
@@ -57,7 +55,7 @@ module.exports = function (config) {
       suite: 'unit'
     },
 
-    webpack: webpackConfig,
+    webpack: require('./webpack.config.test.js'),
 
     webpackMiddleware: {
       stats: 'errors-only'

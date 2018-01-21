@@ -33,10 +33,9 @@ class PeopleListController {
     });
   }
 }
-
 PeopleListController.$inject = ['peopleService'];
 
-export default {
+const peopleList = {
   bindings: {
     characters: '<',
     searchedText: '@'
@@ -44,3 +43,5 @@ export default {
   template: peopleListTemplate,
   controller: PeopleListController
 };
+
+export { peopleList };

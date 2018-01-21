@@ -1,4 +1,4 @@
-export default class PeopleResource {
+class PeopleResource {
   constructor(character) {
     this.name = character.name;
     this.height = character.height;
@@ -10,3 +10,5 @@ export default class PeopleResource {
     this.gender = character.gender;
   }
 }
+
+export { PeopleResource };

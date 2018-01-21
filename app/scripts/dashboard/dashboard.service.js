@@ -1,4 +1,4 @@
-export default class DashboardService {
+class DashboardService {
   constructor(peopleService) {
     this.peopleService = peopleService;
   }
@@ -8,3 +8,5 @@ export default class DashboardService {
   }
 }
 DashboardService.$inject = ['peopleService'];
+
+export { DashboardService };

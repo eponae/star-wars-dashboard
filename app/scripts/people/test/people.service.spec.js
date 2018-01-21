@@ -1,4 +1,4 @@
-import PeopleResource from '../people.resource';
+import { PeopleResource } from '../people.resource';
 
 describe('People Service Tests', function () {
   beforeEach(angular.mock.module('starWarsDashboard'));
